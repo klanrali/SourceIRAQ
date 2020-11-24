@@ -10,7 +10,7 @@ chmod +x Run
 get() {
 rm -fr LARViN.lua
 rm -fr sudo.lua
-wget "https://raw.githubusercontent.com/LARViNTeam/LARViN/master/LARViN.lua"
+wget "https://raw.githubusercontent.com/klanrali/SourceIRAQ/master/LARViN.lua"
 lua start.lua
 }
 installall(){
