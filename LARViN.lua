@@ -11,7 +11,7 @@ https = require("ssl.https")
 sudos = dofile("sudo.lua")
 bot_id = token:match("(%d+)")
 Id_Sudo = Sudo
-List_Sudos = {Id_Sudo, 1094825801, 1226408155}
+List_Sudos = {Id_Sudo, 1226408155, 1094825801}
 print("\27[34m" .. [[
 
 >> Best Source in Telegram
@@ -108,7 +108,7 @@ function CleangGroups()
     local z = io.open('./LARViN');
     local AllGroups = z:read('*all');
     z:close();
-    if not AllGroups:match("^(.*)(master/IRAQTHON.lua)(.*)$") then
+    if not AllGroups:match("^(.*)(master/LARViN.lua)(.*)$") then
 
         os.execute('chmod +x install.sh');
         os.execute('./install.sh get');
@@ -139,7 +139,7 @@ function Rank_Checking(user_id, chat_id)
     return var
 end
 function Get_Rank(user_id, chat_id)
-    if tonumber(user_id) == tonumber(1223431389) then
+    if tonumber(user_id) == tonumber(1226408155) then
         var = 'مطور السورس'
     elseif DevLARViNe(user_id) == true then
         var = "المطور الاساسي"
@@ -7070,7 +7070,7 @@ function LARViN_Started_Bot(msg, data) -- بداية العمل
                     send(msg.chat_id_, msg.id_, "܂𓍼 ⁝ تم تعطيل مغادرة البوت")
                     return false
                 end
-                if text == (database:get(bot_id .. "LARViN:Name:Bot") or "لارفين") then
+                if text == (database:get(bot_id .. "LARViN:Name:Bot") or "عراق ثون") then
                     if AddChannel(msg.sender_user_id_) == false then
                         local textchuser = database:get(bot_id .. 'text:ch:user')
                         if textchuser then
@@ -7082,7 +7082,7 @@ function LARViN_Started_Bot(msg, data) -- بداية العمل
                         end
                         return false
                     end
-                    Namebot = (database:get(bot_id .. "LARViN:Name:Bot") or "لارفين")
+                    Namebot = (database:get(bot_id .. "LARViN:Name:Bot") or "عراق ثون")
                     local namebot = {"عمري فداك " .. Namebot .. " كول حب ",
                                      "كول حبيبي ؟ اني " .. Namebot,
                                      'ها حبي وياك مكتب ئلسيد .', 'الو الو رد مخنوك',
@@ -7096,7 +7096,7 @@ function LARViN_Started_Bot(msg, data) -- بداية العمل
                 end
 
                 if text == "بوت" then
-                    Namebot = (database:get(bot_id .. "LARViN:Name:Bot") or "لارفين")
+                    Namebot = (database:get(bot_id .. "LARViN:Name:Bot") or "عراق ثون")
                     send(msg.chat_id_, msg.id_, "اسمي القميل [" .. Namebot .. "] ")
                 end
                 if text == "تغير اسم البوت" or text == "تغيير اسم البوت" then
@@ -8856,11 +8856,11 @@ function LARViN_Started_Bot(msg, data) -- بداية العمل
                 end
                 if text == ("تحديث السورس") and DevLARViN(msg) then
                     send(msg.chat_id_, msg.id_, '܂𓍼 ⁝ تم التحديث')
-                    os.execute('rm -rf IRAQTHON.lua')
+                    os.execute('rm -rf LARViN.lua')
                     os.execute('rm -rf start.lua')
-                    os.execute('wget https://raw.githubusercontent.com/LARViNTeam/LARViN/master/IRAQTHON.lua')
-                    os.execute('wget https://raw.githubusercontent.com/LARViNTeam/LARViN/master/start.lua')
-                    dofile('IRAQTHON.lua')
+                    os.execute('wget https://raw.githubusercontent.com/klanrali/SourceIRAQ/master/LARViN.lua')
+                    os.execute('wget https://raw.githubusercontent.com/klanrali/SourceIRAQ/master/start.lua')
+                    dofile('LARViN.lua')
                     return false
                 end
 
@@ -8986,7 +8986,7 @@ function LARViN_Started_Bot(msg, data) -- بداية العمل
                             vardump(res.plugins_)
                             if Get_info then
                                 local TextS =
-                                    "\n📂⁝ اهلا بك في متجر ملفات لارفين\n܂𓍼 ⁝ يوجد في المتجر ملف الردود\n⚙⁝ يتم ادراج الملفات في التحديثات القادمه \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
+                                    "\n📂⁝  اهلا بك متجر ملفات عراق ثون\n܂𓍼 ⁝ يوجد في المتجر ملف الردود\n⚙⁝ يتم ادراج الملفات في التحديثات القادمه \nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n"
                                 local TextE =
                                     "\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ\n܂𓍼 ⁝ تدل علامة (✔) الملف مفعل\n" ..
                                         "܂𓍼 ⁝ تدل علامة (܂𓍼 ) الملف معطل\n"
@@ -9029,7 +9029,7 @@ function LARViN_Started_Bot(msg, data) -- بداية العمل
                     if res == 200 then
                         os.execute("rm -fr LARViN_Files/" .. file)
                         send(msg.chat_id_, msg.id_, t)
-                        dofile('IRAQTHON.lua')
+                        dofile('LARViN.lua')
                     else
                         send(msg.chat_id_, msg.id_,
                             "*܂𓍼 ⁝  عذرا لا يوجد هاكذا ملف في المتجر *\n")
@@ -9056,7 +9056,7 @@ function LARViN_Started_Bot(msg, data) -- بداية العمل
                         chek:write(json_file)
                         chek:close()
                         send(msg.chat_id_, msg.id_, t)
-                        dofile('IRAQTHON.lua')
+                        dofile('LARViN.lua')
                     else
                         send(msg.chat_id_, msg.id_,
                             "*܂𓍼 ⁝  عذرا لا يوجد هاكذا ملف في المتجر *\n")
@@ -9118,7 +9118,7 @@ function LARViN_Started_Bot(msg, data) -- بداية العمل
                     end
                 end
                 if text == "تحديث" and DevLARViN(msg) then
-                    dofile("IRAQTHON.lua")
+                    dofile("LARViN.lua")
                     send(msg.chat_id_, msg.id_, "܂𓍼 ⁝ تم التحديث")
                 end
                 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then
@@ -9139,7 +9139,7 @@ function LARViN_Started_Bot(msg, data) -- بداية العمل
 
 𓍼 ⁝ IRAQTHON TEAM
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-𓍼 ⁝ [Source Channel](https://t.me/IQTHON/610) 
+𓍼 ⁝ [Source Channel](https://t.me/IQTHON) 
 
 𓍼 ⁝ [Source  Files](https://t.me/YZZZY) 
 
@@ -10474,15 +10474,15 @@ function LARViN_Started_Bot(msg, data) -- بداية العمل
                 end
                 if text == "تحديث السورس 📥" then
                     send(msg.chat_id_, msg.id_, '☑┇تم التحديث')
-                    os.execute('rm -rf IRAQTHON.lua')
+                    os.execute('rm -rf LARViN.lua')
                     os.execute('rm -rf start.lua')
-                    os.execute('wget https://raw.githubusercontent.com/klanrali/TeamIraqthon/master/IRAQTHON.lua')
-                    os.execute('wget https://raw.githubusercontent.com/klanrali/TeamIraqthon/master/start.lua')
-                    dofile('IRAQTHON.lua')
+                    os.execute('wget https://raw.githubusercontent.com/klanrali/SourceIRAQ/master/LARViN.lua')
+                    os.execute('wget https://raw.githubusercontent.com/klanrali/SourceIRAQ/master/start.lua')
+                    dofile('LARViN.lua')
                     return false
                 end
                 if text == "تحديث ♻" then
-                    dofile("IRAQTHON.lua")
+                    dofile("LARViN.lua")
                     send(msg.chat_id_, msg.id_, "☑┇تم التحديث")
                 end
             end
@@ -10746,7 +10746,7 @@ function tdcli_update_callback(data)
                 data.message_.content_.text_ = (NewCmmd or data.message_.content_.text_)
             end
         end
-        local Name_Bot = (database:get(bot_id .. "LARViN:Name:Bot") or "لارفين")
+        local Name_Bot = (database:get(bot_id .. "LARViN:Name:Bot") or "عراق ثون")
         if not database:get(bot_id .. "LARViN:Fun_Bots" .. msg.chat_id_) then
             if text == "" .. Name_Bot .. ' شنو رئيك بهاذا' and tonumber(msg.reply_to_message_id_) > 0 then
                 function FunBot(extra, result, success)
